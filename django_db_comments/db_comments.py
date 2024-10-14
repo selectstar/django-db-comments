@@ -98,7 +98,7 @@ def copy_help_texts_to_database(
 
     app_models = [
         app_model
-        for app_model in app_config.get_models()
+        for app_model in apps.get_models()
         if not any(
             [
                 app_model._meta.abstract,
